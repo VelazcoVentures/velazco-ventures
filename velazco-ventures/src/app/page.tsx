@@ -2,101 +2,181 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-stone-900 text-white">
+      {/* Header */}
+      <header className="flex justify-between items-center p-6 sm:p-8">
+        <div className="text-2xl font-bold">
+          <span className="text-white">Velazco</span>
+          <span className="text-red-600"> Ventures</span>
+        </div>
+        <nav className="hidden md:flex space-x-8">
+          <a href="/" className="text-red-500 font-semibold">Home</a>
+          <a href="/about" className="hover:text-red-400 transition-colors">About</a>
+          <a href="/initiative" className="hover:text-red-400 transition-colors">AI Initiative</a>
+          <a href="/join" className="hover:text-red-400 transition-colors">Join Us</a>
+        </nav>
+      </header>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Hero Section */}
+      <main className="flex flex-col items-center justify-center px-6 sm:px-8 py-20">
+        <div className="max-w-5xl text-center space-y-8">
+          <h1 className="text-4xl sm:text-6xl font-bold leading-tight">
+            Find Your People.
+            <span className="text-red-600"> Build Together.</span>
+            <br />
+            Create Impact.
+          </h1>
+          
+          <p className="text-xl sm:text-2xl text-stone-300 max-w-4xl mx-auto leading-relaxed">
+            Velazco Ventures brings together people who want to make a difference. We provide 
+            the structure and resources. You bring your ideas and perspective.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-8">
+            <a href="/join" className="bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg">
+              Join Our Community
+            </a>
+            <a href="/about" className="border-2 border-stone-600 hover:border-red-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors text-lg">
+              Learn How It Works
+            </a>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Simple Explanation */}
+      <section className="px-6 sm:px-8 py-16 bg-stone-800">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <h2 className="text-3xl font-bold">
+            What is <span className="text-red-600">Velazco Ventures?</span>
+          </h2>
+          
+          <p className="text-xl text-stone-300 leading-relaxed">
+            A platform where people with shared values come together to build initiatives that 
+            create real change. Guided by inclusivity, leadership, and sustainability.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="bg-stone-900 p-6 rounded-lg">
+              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🤝</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Community</h3>
+              <p className="text-stone-300">
+                Monthly meetings where everyone's voice matters
+              </p>
+            </div>
+            
+            <div className="bg-stone-900 p-6 rounded-lg">
+              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">🎯</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Structure</h3>
+              <p className="text-stone-300">
+                Business frameworks that turn ideas into action
+              </p>
+            </div>
+            
+            <div className="bg-stone-900 p-6 rounded-lg">
+              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-3xl">💡</span>
+              </div>
+              <h3 className="text-xl font-semibold mb-3">Impact</h3>
+              <p className="text-stone-300">
+                Real initiatives that make measurable difference
+              </p>
+            </div>
+          </div>
+
+          <a href="/about" className="inline-block text-red-500 hover:text-red-400 font-semibold text-lg mt-8">
+            Learn more about who we are →
+          </a>
+        </div>
+      </section>
+
+      {/* Current Initiative */}
+      <section className="px-6 sm:px-8 py-16 bg-stone-900">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <h2 className="text-3xl font-bold">
+            Our First <span className="text-red-600">Initiative</span>
+          </h2>
+          
+          <p className="text-xl text-stone-300 leading-relaxed">
+            Building an interdisciplinary community to understand AI's human impact. Creating 
+            accessible resources using diverse perspectives to help people understand AI's effects 
+            and develop technology more sustainably and ethically.
+          </p>
+
+          <div className="bg-stone-800 p-8 rounded-lg">
+            <h3 className="text-xl font-semibold text-red-500 mb-4">Who Should Join</h3>
+            <p className="text-stone-300 mb-6">
+              Anyone curious about AI's impact on humanity. Tech professionals, artists, students, 
+              community members, researchers. You don't need expertise, just care about the future.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/initiative" className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                Learn About AI Initiative
+              </a>
+              <a href="/join" className="inline-block border-2 border-red-600 hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                Join Monthly Meetings
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Simple CTA */}
+      <section className="px-6 sm:px-8 py-16 bg-stone-800">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
+          <h2 className="text-3xl font-bold">
+            Ready to Make a <span className="text-red-600">Difference?</span>
+          </h2>
+          <p className="text-xl text-stone-300">
+            You don't need to be an expert. You just need to care.
+          </p>
+          <a href="/join" className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-12 rounded-lg transition-colors text-lg">
+            Get Involved
+          </a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-stone-800 px-6 sm:px-8 py-12 border-t border-stone-700">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            <div>
+              <div className="text-xl font-bold mb-4">
+                <span className="text-white">Velazco</span>
+                <span className="text-red-600"> Ventures</span>
+              </div>
+              <p className="text-stone-400">
+                Building together through inclusivity, leadership, and sustainability.
+              </p>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-stone-400">
+                <li><a href="/about" className="hover:text-red-400 transition-colors">About Us</a></li>
+                <li><a href="/initiative" className="hover:text-red-400 transition-colors">AI Initiative</a></li>
+                <li><a href="/join" className="hover:text-red-400 transition-colors">Join Community</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Get Involved</h4>
+              <div className="space-y-2 text-stone-400">
+                <p>Find your people. Build together. Create impact.</p>
+                <a href="/join" className="inline-block bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded transition-colors">
+                  Join Us
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="border-t border-stone-700 pt-8 text-center text-stone-400">
+            <p>&copy; 2025 Velazco Ventures. Creating a future where technology serves all of humanity.</p>
+          </div>
+        </div>
       </footer>
     </div>
   );
